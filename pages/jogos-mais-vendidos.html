@@ -3,76 +3,87 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jogos Mais Vendidos</title>
+    <title>Jogos Mais Vendidos - Nintendo News</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
-    <h1>Os Jogos Mais Vendidos</h1>
-    <p>Confira os jogos mais vendidos da Nintendo com dados reais e atualizados!</p>
-    <a href="../index.html">Voltar ao Nintendo News</a>
-    <br />
-    <br />
+    <main class="focused-layout">
+      <div class="retro-card table-card">
+        <div class="table-header is-center" style="flex-direction: column">
+          <h1 class="retro-title text-primary">Os Jogos Mais Vendidos</h1>
+          <p>Confira os jogos mais vendidos da Nintendo com dados reais e atualizados!</p>
+          <br />
+          <a href="../index.html" class="btn-retro">◄ Voltar ao Nintendo News</a>
+        </div>
 
-    <table border="1">
-      <caption>Top 5 Jogos Mais Vendidos do Nintendo Switch</caption>
+        <div class="table-responsive">
+          <table class="retro-table">
+            <caption>Top 5 Jogos do Nintendo Switch</caption>
 
-      <colgroup>
-        <col span="1" />
-        <col span="1" />
-        <col span="1" />
-        <col span="1" />
-        <col span="1" />
-      </colgroup>
+            <colgroup>
+              <col span="1" style="width: 10%" />
+              <col span="1" style="width: 25%" />
+              <col span="1" style="width: 35%" />
+              <col span="1" style="width: 15%" />
+              <col span="1" style="width: 15%" />
+            </colgroup>
 
-      <thead>
-        <tr>
-          <th scope="col">Posição</th>
-          <th scope="col">Console</th>
-          <th scope="col">Jogo</th>
-          <th scope="col">Gênero</th>
-          <th scope="col">Vendas (milhões)</th>
-        </tr>
-      </thead>
+            <thead>
+              <tr>
+                <th scope="col">Pos</th>
+                <th scope="col">Console</th>
+                <th scope="col">Jogo</th>
+                <th scope="col">Gênero</th>
+                <th scope="col">Vendas (milhões)</th>
+              </tr>
+            </thead>
 
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td rowspan="5">Nintendo Switch</td>
-          <td>Mario Kart 8 Deluxe</td>
-          <td>Corrida</td>
-          <td>70.59</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Animal Crossing: New Horizons</td>
-          <td>Simulação</td>
-          <td>49.32</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Super Smash Bros. Ultimate</td>
-          <td>Luta</td>
-          <td>37.44</td>
-        </tr>
-        <tr>
-          <th scope="row">4</th>
-          <td>The Legend of Zelda: Breath of the Wild</td>
-          <td>Ação e Aventura</td>
-          <td>33.64</td>
-        </tr>
-        <tr>
-          <th scope="row">5</th>
-          <td>Super Mario Odyssey</td>
-          <td>Plataforma</td>
-          <td>30.27</td>
-        </tr>
-      </tbody>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td rowspan="5" style="font-weight: bold; background-color: var(--snes-card-bg)">
+                  Nintendo Switch
+                </td>
+                <td>Mario Kart 8 Deluxe</td>
+                <td>Corrida</td>
+                <td>70.59</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Animal Crossing: New Horizons</td>
+                <td>Simulação</td>
+                <td>49.32</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Super Smash Bros. Ultimate</td>
+                <td>Luta</td>
+                <td>37.44</td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>The Legend of Zelda: Breath of the Wild</td>
+                <td>Ação/Aventura</td>
+                <td>33.64</td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td>Super Mario Odyssey</td>
+                <td>Plataforma</td>
+                <td>30.27</td>
+              </tr>
+            </tbody>
 
-      <tfoot>
-        <tr>
-          <th scope="row" colspan="4">Soma Total do Top 5</th>
-          <td>221.26</td>
-        </tr>
-      </tfoot>
-    </table>
+            <tfoot>
+              <tr>
+                <th scope="row" colspan="4">Soma Total do Top 5</th>
+                <td>221.26</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </main>
   </body>
 </html>

@@ -3,76 +3,95 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Consoles Mais Vendidos</title>
+    <title>Consoles Mais Vendidos - Nintendo News</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
-    <h1>Os Consoles Mais Vendidos</h1>
-    <p>Confira os consoles mais vendidos da Nintendo com dados reais e atualizados!</p>
-    <a href="../index.html">Voltar ao Nintendo News</a>
-    <br />
-    <br />
+    <main class="focused-layout">
+      <div class="retro-card table-card">
+        <div class="table-header is-center" style="flex-direction: column">
+          <h1 class="retro-title text-primary">Os Consoles Mais Vendidos</h1>
+          <p>Confira os consoles mais vendidos da Nintendo com dados reais e atualizados!</p>
+          <br />
+          <a href="../index.html" class="btn-retro">◄ Voltar ao Nintendo News</a>
+        </div>
 
-    <table border="1">
-      <caption>Top 5 Consoles Mais Vendidos da História da Nintendo</caption>
+        <div class="table-responsive">
+          <table class="retro-table">
+            <caption>Top 5 Consoles da História da Nintendo</caption>
 
-      <colgroup>
-        <col span="1" />
-        <col span="1" />
-        <col span="1" />
-        <col span="1" />
-        <col span="1" />
-      </colgroup>
+            <colgroup>
+              <col span="1" style="width: 10%" />
+              <col span="1" style="width: 25%" />
+              <col span="1" style="width: 35%" />
+              <col span="1" style="width: 15%" />
+              <col span="1" style="width: 15%" />
+            </colgroup>
 
-      <thead>
-        <tr>
-          <th scope="col">Posição</th>
-          <th scope="col">Fabricante</th>
-          <th scope="col">Console</th>
-          <th scope="col">Ano de Lançamento</th>
-          <th scope="col">Vendas (milhões)</th>
-        </tr>
-      </thead>
+            <thead>
+              <tr>
+                <th scope="col">Pos</th>
+                <th scope="col">Fabricante</th>
+                <th scope="col">Console</th>
+                <th scope="col">Ano</th>
+                <th scope="col">Vendas (milhões)</th>
+              </tr>
+            </thead>
 
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td rowspan="5">Nintendo</td>
-          <td>Nintendo Switch</td>
-          <td>2017</td>
-          <td>155.37</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Nintendo DS</td>
-          <td>2004</td>
-          <td>154.02</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Game Boy / Game Boy Color</td>
-          <td>1989</td>
-          <td>118.69</td>
-        </tr>
-        <tr>
-          <th scope="row">4</th>
-          <td>Wii</td>
-          <td>2006</td>
-          <td>101.63</td>
-        </tr>
-        <tr>
-          <th scope="row">5</th>
-          <td>Game Boy Advance</td>
-          <td>2001</td>
-          <td>81.51</td>
-        </tr>
-      </tbody>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td
+                  rowspan="5"
+                  style="
+                    font-weight: bold;
+                    font-family: &quot;Press Start 2P&quot;, monospace;
+                    font-size: 0.7rem;
+                    background-color: var(--snes-card-bg);
+                  "
+                >
+                  Nintendo
+                </td>
+                <td>Nintendo Switch</td>
+                <td>2017</td>
+                <td>155.37</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Nintendo DS</td>
+                <td>2004</td>
+                <td>154.02</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Game Boy / Game Boy Color</td>
+                <td>1989</td>
+                <td>118.69</td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>Wii</td>
+                <td>2006</td>
+                <td>101.63</td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td>Game Boy Advance</td>
+                <td>2001</td>
+                <td>81.51</td>
+              </tr>
+            </tbody>
 
-      <tfoot>
-        <tr>
-          <th scope="row" colspan="4">Total de Vendas do Top 5 (em milhões)</th>
-          <td>611.22</td>
-        </tr>
-      </tfoot>
-    </table>
+            <tfoot>
+              <tr>
+                <th scope="row" colspan="4">Total de Vendas do Top 5 (em milhões)</th>
+                <td>611.22</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
