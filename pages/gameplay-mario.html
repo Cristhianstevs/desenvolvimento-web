@@ -20,9 +20,14 @@
         </div>
         <nav>
           <ul class="nav-links">
-            <li><a href="../index.html" class="btn-retro">Início</a></li>
-            <li><a href="../index.html#ultimas-noticias" class="btn-retro btn-primary">Notícias</a></li>
-            <li><a href="../index.html#videos-recentes" class="btn-retro btn-success">Vídeos</a></li>
+            <li><a href="../index.html#top" class="btn-retro">Início</a></li>
+            <li>
+              <a href="../index.html#ultimas-noticias" class="btn-retro btn-primary">Notícias</a>
+            </li>
+            <li>
+              <a href="../index.html#videos-recentes" class="btn-retro btn-success">Vídeos</a>
+            </li>
+            <li><a href="../index.html#jogo" class="btn-retro btn-warning">Jogo</a></li>
           </ul>
         </nav>
       </div>
@@ -30,10 +35,10 @@
 
     <main>
       <div class="emulator-layout">
-
         <div class="emulator-hero">
           <h1 class="retro-title">
-            🍄 <span class="text-primary">Super Mario World</span>
+            🍄
+            <span class="text-primary">Super Mario World</span>
           </h1>
           <p>Jogue direto no navegador — sem instalar nada!</p>
         </div>
@@ -49,10 +54,11 @@
           </div>
 
           <div class="game-iframe-container">
-            <div class="loading-screen" id="loadingScreen" onclick="startGame()">
+            <div class="loading-screen" id="loadingScreen">
               <div class="loading-mario">🍄</div>
               <div class="loading-text">
-                Super Mario World<br/>
+                Super Mario World
+                <br />
                 <span>SNES • 1990</span>
               </div>
               <div class="press-start-blink">▶ Clique para jogar!</div>
@@ -64,7 +70,10 @@
 
         <div class="tip-box">
           <div class="tip-icon">💡</div>
-          <p>Dica: clique no ícone de tela cheia dentro do emulador para uma experiência melhor! O jogo carrega em alguns segundos.</p>
+          <p>
+            Dica: clique no ícone de tela cheia dentro do emulador para uma experiência melhor! O
+            jogo carrega em alguns segundos.
+          </p>
         </div>
 
         <section class="controls-section">
@@ -74,29 +83,62 @@
             <div class="control-card">
               <h3>🕹️ Movimento</h3>
               <ul class="control-list">
-                <li><span class="key-badge">↑</span> Pular (segurar)</li>
-                <li><span class="key-badge">← →</span> Mover</li>
-                <li><span class="key-badge">↓</span> Agachar / entrar</li>
+                <li>
+                  <span class="key-badge">W</span>
+                  Olhar para cima
+                </li>
+                <li>
+                  <span class="key-badge">A / D</span>
+                  Mover
+                </li>
+                <li>
+                  <span class="key-badge">S</span>
+                  Agachar / entrar
+                </li>
               </ul>
             </div>
 
             <div class="control-card">
               <h3>🔴 Ações</h3>
               <ul class="control-list">
-                <li><span class="key-badge snes-a">X</span> Pular</li>
-                <li><span class="key-badge snes-b">Z</span> Correr / Ação</li>
-                <li><span class="key-badge snes-y">A</span> Spin Jump</li>
-                <li><span class="key-badge snes-x">S</span> Atirar / Ação 2</li>
+                <li>
+                  <span class="key-badge snes-a">Espaço</span>
+                  Pular
+                </li>
+                <li>
+                  <span class="key-badge snes-b">Shift</span>
+                  Correr / Ação
+                </li>
+                <li>
+                  <span class="key-badge snes-y">Alt</span>
+                  Spin Jump
+                </li>
+                <li>
+                  <span class="key-badge snes-x">Ctrl</span>
+                  Atirar / Ação 2
+                </li>
               </ul>
             </div>
 
             <div class="control-card">
               <h3>⚙️ Sistema</h3>
               <ul class="control-list">
-                <li><span class="key-badge">Enter</span> Start / Pause</li>
-                <li><span class="key-badge">Shift</span> Select</li>
-                <li><span class="key-badge">F2</span> Reiniciar jogo</li>
-                <li><span class="key-badge">F1</span> Salvar estado</li>
+                <li>
+                  <span class="key-badge">Enter</span>
+                  Start / Pause
+                </li>
+                <li>
+                  <span class="key-badge">Shift</span>
+                  Select
+                </li>
+                <li>
+                  <span class="key-badge">F2</span>
+                  Reiniciar jogo
+                </li>
+                <li>
+                  <span class="key-badge">F1</span>
+                  Salvar estado
+                </li>
               </ul>
             </div>
           </div>
@@ -105,43 +147,25 @@
         <div class="back-nav">
           <a href="../index.html" class="link-retro">&lt; Voltar ao Início &gt;</a>
         </div>
-
       </div>
     </main>
 
-    <footer class="site-footer retro-border-top">
-      <div class="footer-credits">
+    <footer class="site-footer" style="padding: 20px 0">
+      <div class="footer-credits" style="padding: 20px 0; border: none">
         <p>Todos os direitos reservados à Nintendo®</p>
         <p>
           Site desenvolvido por
-          <a href="https://github.com/cristhianstevs" target="_blank" class="footer-credits-link">Cristhianstevs</a>
+          <a href="https://github.com/cristhianstevs" target="_blank" class="footer-credits-link">
+            Cristhianstevs
+          </a>
           &
-          <a href="https://github.com/david-rs0609" target="_blank" class="footer-credits-link">david-rs0609</a>
+          <a href="https://github.com/david-rs0609" target="_blank" class="footer-credits-link">
+            david-rs0609
+          </a>
         </p>
       </div>
     </footer>
 
-   <script>
-      // Parâmetros do EmulatorJS
-      EJS_player = "#game";
-      EJS_core = "snes";
-      
-      // CAMINHO CORRETO: O "../" sai da pasta "pages" e entra na pasta "assets" da raiz
-      EJS_gameUrl = "../assets/Super-Mario-World-(USA).sfc"; 
-      
-      // Mantemos a CDN estável para carregar os botões, CSS e o núcleo gráfico do SNES
-      EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
-      EJS_startOnLoad = false; 
-
-      function startGame() {
-        // Esconde a tela de clique inicial
-        document.getElementById('loadingScreen').classList.add('hidden');
-
-        // Descarrega o motor lógico do emulador
-        const script = document.createElement('script');
-        script.src = "https://cdn.emulatorjs.org/stable/data/loader.js";
-        document.body.appendChild(script);
-      }
-    </script>
+    <script src="../js/emulador.js"></script>
   </body>
 </html>

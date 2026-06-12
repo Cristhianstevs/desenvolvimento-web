@@ -608,9 +608,15 @@ header {
   border-radius: 0;
 }
 
-.dot-red    { background-color: var(--snes-red); }
-.dot-yellow { background-color: var(--snes-yellow); }
-.dot-green  { background-color: var(--snes-green); }
+.dot-red {
+  background-color: var(--snes-red);
+}
+.dot-yellow {
+  background-color: var(--snes-yellow);
+}
+.dot-green {
+  background-color: var(--snes-green);
+}
 
 /* === CONTAINER DO JOGO === */
 .game-iframe-container {
@@ -628,9 +634,9 @@ header {
 /* === LOADING / TELA DE CLIQUE SEPARADA === */
 .loading-screen {
   position: absolute;
-  top: 0; 
+  top: 0;
   left: 0;
-  width: 100%; 
+  width: 100%;
   height: 100%;
   background-color: #000;
   display: flex;
@@ -654,8 +660,12 @@ header {
 }
 
 @keyframes snes-bounce {
-  from { transform: translateY(0); }
-  to   { transform: translateY(-15px); }
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-15px);
+  }
 }
 
 .loading-text {
@@ -680,8 +690,14 @@ header {
   text-transform: uppercase;
 }
 
+.ejs_start_button {
+  bottom: 50% !important;
+}
+
 @keyframes snes-blink {
-  50% { opacity: 0; }
+  50% {
+    opacity: 0;
+  }
 }
 
 /* === SEÇÃO DE CONTROLES === */
@@ -739,10 +755,22 @@ header {
   box-shadow: 2px 2px 0px var(--snes-text-muted);
 }
 
-.key-badge.snes-a  { background-color: var(--snes-red);    color: #fff; }
-.key-badge.snes-b  { background-color: var(--snes-yellow); color: var(--snes-black); }
-.key-badge.snes-x  { background-color: var(--snes-blue);   color: #fff; }
-.key-badge.snes-y  { background-color: var(--snes-green);  color: #fff; }
+.key-badge.snes-a {
+  background-color: var(--snes-red);
+  color: #fff;
+}
+.key-badge.snes-b {
+  background-color: var(--snes-yellow);
+  color: var(--snes-black);
+}
+.key-badge.snes-x {
+  background-color: var(--snes-blue);
+  color: #fff;
+}
+.key-badge.snes-y {
+  background-color: var(--snes-green);
+  color: #fff;
+}
 
 /* === CAIXA DE INFORMAÇÕES/DICAS === */
 .tip-box {
