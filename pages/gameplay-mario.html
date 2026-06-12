@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nintendo News - Jogar Super Mario World</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <header class="site-header retro-border-bottom">
+      <div class="header-wrapper">
+        <div class="logo">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Nintendo_gray_logo.svg/960px-Nintendo_gray_logo.svg.png"
+            alt="Logo da Nintendo"
+            width="120"
+          />
+        </div>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="../index.html" class="btn-retro">Início</a></li>
+            <li><a href="../index.html#ultimas-noticias" class="btn-retro btn-primary">Notícias</a></li>
+            <li><a href="../index.html#videos-recentes" class="btn-retro btn-success">Vídeos</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="emulator-layout">
+
+        <div class="emulator-hero">
+          <h1 class="retro-title">
+            🍄 <span class="text-primary">Super Mario World</span>
+          </h1>
+          <p>Jogue direto no navegador — sem instalar nada!</p>
+        </div>
+
+        <div class="emulator-wrapper">
+          <div class="emulator-topbar">
+            <span class="emulator-topbar-title">⚡ SNES Emulator — Super Mario World (1990)</span>
+            <div class="emulator-dots">
+              <div class="emulator-dot dot-red"></div>
+              <div class="emulator-dot dot-yellow"></div>
+              <div class="emulator-dot dot-green"></div>
+            </div>
+          </div>
+
+          <div class="game-iframe-container">
+            <div class="loading-screen" id="loadingScreen" onclick="startGame()">
+              <div class="loading-mario">🍄</div>
+              <div class="loading-text">
+                Super Mario World<br/>
+                <span>SNES • 1990</span>
+              </div>
+              <div class="press-start-blink">▶ Clique para jogar!</div>
+            </div>
+
+            <div id="game"></div>
+          </div>
+        </div>
+
+        <div class="tip-box">
+          <div class="tip-icon">💡</div>
+          <p>Dica: clique no ícone de tela cheia dentro do emulador para uma experiência melhor! O jogo carrega em alguns segundos.</p>
+        </div>
+
+        <section class="controls-section">
+          <h2 class="retro-title is-center">Controles do Teclado</h2>
+
+          <div class="controls-grid">
+            <div class="control-card">
+              <h3>🕹️ Movimento</h3>
+              <ul class="control-list">
+                <li><span class="key-badge">↑</span> Pular (segurar)</li>
+                <li><span class="key-badge">← →</span> Mover</li>
+                <li><span class="key-badge">↓</span> Agachar / entrar</li>
+              </ul>
+            </div>
+
+            <div class="control-card">
+              <h3>🔴 Ações</h3>
+              <ul class="control-list">
+                <li><span class="key-badge snes-a">X</span> Pular</li>
+                <li><span class="key-badge snes-b">Z</span> Correr / Ação</li>
+                <li><span class="key-badge snes-y">A</span> Spin Jump</li>
+                <li><span class="key-badge snes-x">S</span> Atirar / Ação 2</li>
+              </ul>
+            </div>
+
+            <div class="control-card">
+              <h3>⚙️ Sistema</h3>
+              <ul class="control-list">
+                <li><span class="key-badge">Enter</span> Start / Pause</li>
+                <li><span class="key-badge">Shift</span> Select</li>
+                <li><span class="key-badge">F2</span> Reiniciar jogo</li>
+                <li><span class="key-badge">F1</span> Salvar estado</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <div class="back-nav">
+          <a href="../index.html" class="link-retro">&lt; Voltar ao Início &gt;</a>
+        </div>
+
+      </div>
+    </main>
+
+    <footer class="site-footer retro-border-top">
+      <div class="footer-credits">
+        <p>Todos os direitos reservados à Nintendo®</p>
+        <p>
+          Site desenvolvido por
+          <a href="https://github.com/cristhianstevs" target="_blank" class="footer-credits-link">Cristhianstevs</a>
+          &
+          <a href="https://github.com/david-rs0609" target="_blank" class="footer-credits-link">david-rs0609</a>
+        </p>
+      </div>
+    </footer>
+
+   <script>
+      // Parâmetros do EmulatorJS
+      EJS_player = "#game";
+      EJS_core = "snes";
+      
+      // CAMINHO CORRETO: O "../" sai da pasta "pages" e entra na pasta "assets" da raiz
+      EJS_gameUrl = "../assets/Super-Mario-World-(USA).sfc"; 
+      
+      // Mantemos a CDN estável para carregar os botões, CSS e o núcleo gráfico do SNES
+      EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
+      EJS_startOnLoad = false; 
+
+      function startGame() {
+        // Esconde a tela de clique inicial
+        document.getElementById('loadingScreen').classList.add('hidden');
+
+        // Descarrega o motor lógico do emulador
+        const script = document.createElement('script');
+        script.src = "https://cdn.emulatorjs.org/stable/data/loader.js";
+        document.body.appendChild(script);
+      }
+    </script>
+  </body>
+</html>

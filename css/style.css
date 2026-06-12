@@ -544,3 +544,232 @@ header {
   font-family: "Press Start 2P", monospace;
   font-size: 0.7rem;
 }
+
+/* ==========================================================================
+   === PÁGINA DO EMULADOR (ABA SUPER MARIO WORLD) ===
+   ========================================================================== */
+
+.emulator-layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.emulator-hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.emulator-hero .retro-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.emulator-hero p {
+  font-size: 1.2rem;
+  color: var(--snes-text-muted);
+}
+
+/* === WRAPPER DO EMULADOR === */
+.emulator-wrapper {
+  background-color: var(--snes-card-bg);
+  border: 4px solid var(--snes-black);
+  box-shadow: 6px 6px 0px var(--snes-black);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.emulator-topbar {
+  background-color: var(--snes-purple);
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 4px solid var(--snes-black);
+}
+
+.emulator-topbar-title {
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.65rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.emulator-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.emulator-dot {
+  width: 14px;
+  height: 14px;
+  border: 3px solid var(--snes-black);
+  border-radius: 0;
+}
+
+.dot-red    { background-color: var(--snes-red); }
+.dot-yellow { background-color: var(--snes-yellow); }
+.dot-green  { background-color: var(--snes-green); }
+
+/* === CONTAINER DO JOGO === */
+.game-iframe-container {
+  position: relative;
+  width: 100%;
+  background-color: #000;
+  aspect-ratio: 4 / 3; /* Proporção original de tela cheia do SNES */
+}
+
+#game {
+  width: 100%;
+  height: 100%;
+}
+
+/* === LOADING / TELA DE CLIQUE SEPARADA === */
+.loading-screen {
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  z-index: 10;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.loading-screen.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loading-mario {
+  font-size: 4rem;
+  animation: snes-bounce 0.6s infinite alternate;
+}
+
+@keyframes snes-bounce {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-15px); }
+}
+
+.loading-text {
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.75rem;
+  color: #fff;
+  text-align: center;
+  line-height: 2;
+  text-transform: uppercase;
+}
+
+.loading-text span {
+  color: var(--snes-yellow);
+}
+
+.press-start-blink {
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.7rem;
+  color: var(--snes-yellow);
+  animation: snes-blink 1s step-end infinite;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+@keyframes snes-blink {
+  50% { opacity: 0; }
+}
+
+/* === SEÇÃO DE CONTROLES === */
+.controls-section {
+  margin-bottom: 40px;
+}
+
+.controls-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.control-card {
+  background-color: var(--snes-card-bg);
+  border: 4px solid var(--snes-black);
+  box-shadow: 4px 4px 0px var(--snes-black);
+  padding: 20px;
+}
+
+.control-card h3 {
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  color: var(--snes-purple);
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px dashed var(--snes-black);
+}
+
+.control-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.control-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.1rem;
+  color: var(--snes-black);
+}
+
+.key-badge {
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.5rem;
+  background-color: var(--snes-black);
+  color: #fff;
+  padding: 5px 8px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 2px 2px 0px var(--snes-text-muted);
+}
+
+.key-badge.snes-a  { background-color: var(--snes-red);    color: #fff; }
+.key-badge.snes-b  { background-color: var(--snes-yellow); color: var(--snes-black); }
+.key-badge.snes-x  { background-color: var(--snes-blue);   color: #fff; }
+.key-badge.snes-y  { background-color: var(--snes-green);  color: #fff; }
+
+/* === CAIXA DE INFORMAÇÕES/DICAS === */
+.tip-box {
+  background-color: var(--snes-yellow);
+  border: 4px solid var(--snes-black);
+  box-shadow: 4px 4px 0px var(--snes-black);
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.tip-box p {
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.55rem;
+  color: var(--snes-black);
+  line-height: 1.8;
+  text-transform: uppercase;
+}
+
+.tip-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.back-nav {
+  text-align: center;
+  margin-bottom: 20px;
+}
